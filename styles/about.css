@@ -10,6 +10,10 @@
     padding: 2% 10%; 
 }
 
+.header__nav{
+    display: flex;
+}
+
 .header__nav__links {
     font-family: "Nunito", sans-serif;
     font-size: 22px;
@@ -81,6 +85,11 @@ body {
     .header {
         padding: 10%;  
     }
+
+    .header__nav{
+        justify-content: center;
+    }
+
 
     .presentation {
         flex-direction: column-reverse;
