@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-:root{
+:root {
     --primary-color: #000;
     --secondary-color: #7A03FF;
     --tertiary-color: #E8C7DE;
 
-    --montserrat-font: "Monserrat", sans-serif;
+    --montserrat-font: "Montserrat", sans-serif;
     --nunito-font: "Nunito", sans-serif;
 }
 
@@ -15,26 +15,30 @@
     box-sizing: border-box;
 }
 
-.header{
-    padding: 2% 0%;
+.header {
+    padding: 2% 10%; 
 }
 
-.header__nav__links{
-    font-family:var(--nunito-font);
+.header__nav{
+    display: flex;
+}
+
+.header__nav__links {
+    font-family: var(--nunito-font);
     font-size: 1.4rem;
     font-weight: 600;
-    padding: 100px;
-    color:var(--primary-color);
+    padding: 10px 20px; 
+    color: var(--primary-color);
     text-decoration: none;
 }
 
-.header__nav__links:hover{
+.header__nav__links:hover {
     color: var(--secondary-color);
 }
 
 body {
     background-color: var(--tertiary-color);
-    color:var(--primary-color);
+    color: var(--primary-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -43,17 +47,17 @@ body {
 .presentation {
     display: flex;
     align-items: center;
-    margin: 0 100px;
     justify-content: space-between;
-    flex: 1;
-    gap: 82px;
+    margin: 0 10%;
+    gap: 20px;
 }
 
 .presentation-content {
-    width: 50%;
+    width: 100%; 
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .presentation-content-title {
@@ -75,7 +79,7 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px; 
 }
 
 .presentation__links_subtitle {
@@ -87,14 +91,15 @@ span {
 }
 
 .presentation-links-button {
-    width: 40%;
+    width: 100%; 
+    max-width: 300px;
     text-align: center;
     padding: 10px 0; 
     border-radius: 8px;
-    font-family:var(--nunito-font);
+    font-family: var(--nunito-font);
     text-decoration: none;
     color: var(--secondary-color);
-    border: 1px solid  var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -106,7 +111,8 @@ span {
 }
 
 .face__image {
-    width: 40%;
+    width: 100%; 
+    max-width: 350px; 
     border: 1px solid var(--secondary-color) !important;
 }
 
@@ -114,30 +120,41 @@ span {
     background-color: var(--secondary-color);
     padding: 10px;
     color: white;
-    font-family:var(--nunito-font);
+    font-family: var(--nunito-font);
     text-align: center;
     font-size: 1.2rem;
     font-weight: 400;
     margin-top: auto;
 }
 
-@media (max-width: 1200px){
-
-    .header{
+@media (max-width: 1200px) {
+    .header {
         padding: 10% 10%;
     }
 
-    .header__nav__links{
-        justify-content: space-between;
+    .header__nav{
+        display: flex;
+        justify-content: center;
     }
 
-    .presentation{
+    .presentation {
         flex-direction: column-reverse;
         margin-bottom: 10px;
         padding: 5%;
     }
     
-    .presentation-content{
-        width: auto;
+    .presentation-content {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .presentation-links-button {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .face__image {
+        width: 100%;
+        max-width: none;
     }
 }
